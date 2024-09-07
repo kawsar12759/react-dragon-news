@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router-dom";
 import Header from "../../shared/Header/Header";
 import LeftSideNav from "../../shared/LeftSideNav/LeftSideNav";
 import Navbar from "../../shared/Navbar/Navbar";
@@ -5,6 +6,7 @@ import RightSideNav from "../../shared/RightSideNav/RightSIdeNav";
 import BreakingNews from "./BreakingNews/BreakingNews";
 
 const Home = () => {
+    const news = useLoaderData();
     return (
         <div>
             <Header></Header>
