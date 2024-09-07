@@ -15,12 +15,12 @@ const CategoryNews = () => {
     const [selectedNews, setSelectedNews] = useState([]);
 
     useEffect(() => {
-        if (allNews.length > 0) {
-            console.log('as')
-            const sel = allNews.filter(aNews => aNews.category_id === id);
-            console.log(id);
-            setSelectedNews(sel);
-        }
+        if (id === "0") {
+            setSelectedNews(allNews);
+          } else {
+            const selected = allNews.filter((aNews) => aNews.category_id === id);
+            setSelectedNews(selected);
+          }
     }, [id])
     
     return (
